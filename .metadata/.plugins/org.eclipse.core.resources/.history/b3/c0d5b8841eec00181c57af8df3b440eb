@@ -1,0 +1,26 @@
+package conditionals;
+
+public class Main 
+{
+	public static void main(String[] args)
+	{
+		boolean isadd = true;
+		System.out.println(addition(3, 5, isadd));
+	}
+	
+	public static int addition(int num1, int num2, boolean add)
+	{
+		int sum;
+		if (add == true)
+		{
+			sum = num1 + num2;
+		}
+		else
+		{
+			sum = num1 * num2;
+		}
+		
+		return sum;
+	}
+
+}

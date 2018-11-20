@@ -1,0 +1,13 @@
+package parameters;
+
+public class Main 
+{
+	public static void main(String[] args)
+	{
+		String greeitng = "Hello World!";
+		public void helloWorld(String greeting)
+		{
+			System.out.println(greeting);
+		}
+	}
+}
