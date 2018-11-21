@@ -1,0 +1,33 @@
+package streamExercise;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class StreamExercise 
+{
+	public static void main(String[] args)
+	{
+		List<String> strings1 = Arrays.asList("abc", "", "bc", "efg", "abcd", "", "jkl");
+		List<String> filtered = strings1.stream()
+				.filter(string -> !string.isEmpty())
+				.collect(Collectors.toList());
+		System.out.println(filtered);
+		
+		List<String> strings2 = Arrays.asList("Hello", "It's", "Dale");		
+		
+		List<String> uppercase = capitalise(strings2);
+		System.out.println(uppercase);
+	}
+	
+	public static List<String> capitalise(List<String> listName)
+	{
+		List<String> capitalise = listName.stream()
+				.map(string -> string.toUpperCase())
+				.collect(Collectors.toList());
+		
+		return capitalise;
+		
+	}
+}
