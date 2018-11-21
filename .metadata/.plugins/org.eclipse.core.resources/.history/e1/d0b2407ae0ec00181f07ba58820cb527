@@ -1,0 +1,88 @@
+package battleships;
+
+public class Battleships 
+{
+	
+	int shipSize;
+	int shipAllignment;
+	int shipPlacement;
+	static Battleships ship[] = {new Battleships(),new Battleships(),new Battleships(),new Battleships(),new Battleships()};
+	public Battleships()
+	{
+
+	}
+	
+	public void setSize(int size)
+	{
+		shipSize = size;
+	}
+	public int getSize()
+	{
+		return shipSize;
+	}
+	
+	public void setAllignment(int allignment)
+	{
+		shipAllignment = allignment;
+	}
+	public int getAllignment()
+	{
+		return shipAllignment;
+	}
+	
+	public void setPlacement(int placement)
+	{
+		shipPlacement = placement;
+	}
+	public int getPlacement()
+	{
+		return shipPlacement;
+	}
+	
+	public static void main(String[] args)
+	{	
+		//Battleships ship[] = {new Battleships(),new Battleships(),new Battleships(),new Battleships(),new Battleships()};
+		ship[0].setSize(6);
+		ship[0].setAllignment(0);
+		ship[0].setPlacement(1);
+		ship[1].setSize(4);
+		ship[1].setAllignment(1);
+		ship[1].setPlacement(1);
+		ship[2].setSize(3);
+		ship[2].setAllignment(2);
+		ship[2].setPlacement(1);
+		ship[3].setSize(3);
+		ship[3].setAllignment(1);
+		ship[3].setPlacement(1);
+		ship[4].setSize(2);
+		ship[4].setAllignment(0);
+		ship[4].setPlacement(1);
+		int[][] boardSpaces = new int[8][8];
+		
+		for(int []x : boardSpaces)
+		{
+			for(int y : x)
+			{
+				System.out.print(y + "|");
+			}
+			
+			System.out.println();
+			System.out.println("----------------");
+		}	
+	}
+	public static void shipPlacement(int shipID)
+	{
+		if(ship[shipID].getAllignment() == 0) 
+		{
+			ship[]
+		}
+		else if(ship[shipID].getAllignment() == 1)
+		{
+			
+		}
+		else if(ship[shipID].getAllignment() == 2)
+		{
+			
+		}
+	}
+}

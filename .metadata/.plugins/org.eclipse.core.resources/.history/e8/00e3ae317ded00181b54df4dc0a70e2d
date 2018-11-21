@@ -1,0 +1,62 @@
+package people;
+
+import java.util.ArrayList;
+
+public class People 
+{	
+	int personAge;
+	String personFullName;
+	String personOccupation;
+	
+	public People(String fullName, String occupation, int age)
+	{
+		personFullName = fullName;
+		personOccupation = occupation;
+		personAge = age;
+	}
+	
+	public String getName()
+	{
+		return personFullName;
+	}
+	
+	public String getOccupation()
+	{
+		return personOccupation;
+	}
+	
+	public void setAge(int age)
+	{
+		personAge = age;
+	}
+	
+	public int getAge()
+	{
+		return personAge;
+	}
+	
+	public static void main(String[] args)
+	{
+		ArrayList<People> person = new ArrayList<People>();
+		
+		//{new People("William Ashworth","Student"),new People("Richard Nixon", "POTUS"), new People("Harold Godwinson", "King")};
+		person.add(new People("William Ashworth", "Student", 21));
+		person.add(new People("Richard Nixon", "POTUS", 84));
+		person.add(new People("Harold Godwinson", "King", 44));
+		for (People i : person) 
+		{
+			System.out.println(i.toString());
+			//personDetails(personArray[i].getName(), personArray[i].getOccupation(), personArray[i].getAge());
+		}
+	}
+	
+	//public static void personDetails(String fullName, String occupation, int age)
+	public String toString()		
+	{
+		//System.out.println("Name: " + fullName);
+		//System.out.println("Job Title: " + occupation);
+		//System.out.println("Age: " + age);
+		return String.format( + )
+	}
+}
+

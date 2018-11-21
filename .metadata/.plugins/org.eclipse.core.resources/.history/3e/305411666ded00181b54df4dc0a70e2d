@@ -1,0 +1,36 @@
+package people;
+
+public class People 
+{	
+	int personAge;
+	
+	public People(String firstName, String occupation)
+	{
+		System.out.println(firstName);
+		System.out.println(occupation);
+	}
+	
+	public void setAge(int age)
+	{
+		personAge = age;
+	}
+	
+	public int getAge()
+	{
+		return personAge;
+	}
+	
+	public static void main(String[] args)
+	{
+		People person1 = new People("William","Student");
+		person1.setAge(21);
+		person1.personDetails();
+	}
+	
+	public String personDetails()
+	{
+		String details = "me";
+		return details;
+	}
+}
+

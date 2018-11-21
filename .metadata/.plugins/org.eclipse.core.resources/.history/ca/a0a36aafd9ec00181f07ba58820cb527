@@ -1,0 +1,61 @@
+package battleships;
+
+public class Battleships 
+{
+	int shipSize;
+	int shipAllignment;
+	public Battleships(String type)
+	{
+		System.out.println(type);
+	}
+	
+	public void setSize(int size)
+	{
+		shipSize = size;
+	}
+	public int getSize()
+	{
+		return shipSize;
+	}
+	
+	public void setAllignment(int allignment)
+	{
+		shipAllignment = allignment;
+	}
+
+	public static void main(String[] args)
+	{	
+		Battleships ship1 = new Battleships("Aircraft Carrier");
+		ship1.setSize(6);
+		ship1.setAllignment(0);
+		Battleships ship2 = new Battleships("Battleship");
+		ship2.setSize(4);
+		ship1.setAllignment(1);
+		Battleships ship3 = new Battleships("Cruiser");
+		ship3.setSize(3);
+		ship3.setAllignment(2);
+		Battleships ship4 = new Battleships("Submarine");
+		ship4.setSize(3);
+		ship4.setAllignment(1);
+		Battleships ship5 = new Battleships("Destroyer");
+		ship5.setSize(2);
+		ship5.setAllignment(0);
+		int[][] boardSpaces = new int[8][8];
+		
+		for(int []a : boardSpaces)
+		{
+			for(int b : a)
+			{
+				System.out.print(b + "|");
+			}
+			
+			System.out.println();
+			System.out.println("--------------------");
+		}	
+	}	
+	
+	public void shipPlacement(String type)
+	{
+		
+	}
+}

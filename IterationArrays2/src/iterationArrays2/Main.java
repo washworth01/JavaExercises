@@ -9,16 +9,16 @@ public class Main
 		
 		for(int i = 0; i < 10; i++)
 		{
-			System.out.println(addition(5, arrayOfNumbers[i], isadd));
+			System.out.println(addOrMultiply(5, arrayOfNumbers[i], isadd));
 			arrayOfNumbers[i] = arrayOfNumbers[i]*10;
 		}
 		for(int i = 0; i < 10; i++)
 		{
-			System.out.println(addition(5, arrayOfNumbers[i], isadd));
+			System.out.println(addOrMultiply(5, arrayOfNumbers[i], isadd));
 		}
 	}
 	
-	public static int addition(int num1, int num2, boolean add)
+	public static int addOrMultiply(int num1, int num2, boolean add)
 	{
 		int sum;
 		if (num1 == 0)

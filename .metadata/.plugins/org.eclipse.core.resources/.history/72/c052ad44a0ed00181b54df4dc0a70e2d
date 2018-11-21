@@ -1,0 +1,54 @@
+package streamExercise;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class StreamExercise 
+{
+	public static void main(String[] args)
+	{
+		List<String> listOfStrings = Arrays.asList("Hello", "It's", "Dale");		
+		List<String> uppercase = capitalise(listOfStrings);
+		System.out.println(uppercase);
+		
+		List<Integer> listOfNumbers = Arrays.asList(10,7,3,9,11);
+		List<Integer> primeNumbers = returnPrimeNumbers(listOfNumbers);
+		System.out.println(primeNumbers);
+		
+		
+	}
+	
+	
+	public static List<String> capitalise(List<String> listName)
+	{
+		List<String> capitalise = listName.stream()
+				.map(string -> string.toUpperCase())
+				.collect(Collectors.toList());
+		
+		return capitalise;	
+	}
+	
+	public static List<Integer> returnPrimeNumbers(List<Integer> listName)
+	{
+		List<Integer> primeNumbers = listName.stream()
+				.filter(number -> isPrime(number))
+				.sorted()
+				.collect(Collectors.toList());
+		
+		return primeNumbers;
+	}
+	
+	public static boolean isPrime(int number)
+	{
+		if(number % number == 0 && number % 1 == number)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}

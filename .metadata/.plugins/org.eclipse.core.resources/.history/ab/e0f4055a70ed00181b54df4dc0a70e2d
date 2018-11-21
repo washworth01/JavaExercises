@@ -1,0 +1,51 @@
+package people;
+
+public class People 
+{	
+	int personAge;
+	String personFullName;
+	String personOccupation;
+	
+	public People(String fullName, String occupation)
+	{
+		personFullName = fullName;
+		personOccupation = occupation;
+	}
+	
+	public String getName()
+	{
+		return personFullName;
+	}
+	
+	public String getOccupation()
+	{
+		return personOccupation;
+	}
+	
+	public void setAge(int age)
+	{
+		personAge = age;
+	}
+	
+	public int getAge()
+	{
+		return personAge;
+	}
+	
+	public static void main(String[] args)
+	{
+		People person[] = {new People("William Ashworth","Student"),new People("Benjamin Franklin", "POTUS"), new People("Harold Godwinson", "King")};
+		person[0].setAge(21);
+		person[1].setAge(84);
+		person[2].setAge(44);
+		personDetails(person[1].getName(), person[1].getOccupation(), person[1].getAge());
+	}
+	
+	public static void personDetails(String fullName, String occupation, int age)
+	{
+		System.out.println("Name: " + fullName);
+		System.out.println("Job Title: " + occupation);
+		System.out.println("Age: " + age);
+	}
+}
+
