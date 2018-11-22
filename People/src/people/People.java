@@ -52,10 +52,12 @@ public class People
 			List<String> listOfPersonsName = Arrays.asList(i.getName());
 			//personDetails(searchByName(i.getName(), "Richard Nixon"), i.getOccupation(), i.getAge());
 		}
+		
 		List<String> filtered = listOfPersonsName.stream()
-				.filter(person -> person.contains("Richard Nixon"))
-				.collect(Collectors.toList());
-		filtered.forEach(System.out::println);
+				.filter(person -> checkName("William Ashwoth"))
+				.collect(Collectors.toList());searchByName(String
+						name)
+		
 	}
 	
 	public static void personDetails(String fullName, String occupation, int age)		
@@ -63,6 +65,18 @@ public class People
 		System.out.println("Name: " + fullName);
 		System.out.println("Job Title: " + occupation);
 		System.out.println("Age: " + age);
+	}
+	
+	public static boolean checkName(String name)
+	{
+		if (name.contains(name))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	
 }
